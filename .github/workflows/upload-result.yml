@@ -7,7 +7,7 @@ jobs:
   checkout-repo:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout 
+    - name: Checkout repo
       uses: actions/checkout@v2
     - name : uploading the results
       run : |
