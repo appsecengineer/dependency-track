@@ -14,3 +14,6 @@ jobs:
         pip install cyclonedx-bom  
         cyclonedx-py
         python3 upload.py
+      env:
+        URL: ${{ secrets.URL}}
+        KEY: ${{ secrets.KEY }}
