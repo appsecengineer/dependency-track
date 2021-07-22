@@ -1,0 +1,16 @@
+name: Dependency-track
+
+on:
+  push:
+
+jobs:
+  checkout-repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+    - name : uploading the results
+      run : |
+        pip install cyclonedx-bom  
+        cyclonedx-py
+        python3 upload.py
